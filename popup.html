@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NME Checker</title>
+  <script src="popup.js"></script>
+  <style>
+    body {
+      width: 320px;
+      height: 400px; /* Set an initial height */
+      overflow: auto; /* Enable scrolling if content exceeds the height */
+    }
+    #itemInput {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .suggestion {
+      cursor: pointer;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      margin-top: 5px;
+    }
+    .suggestion:hover {
+      background-color: #e9e9e9;
+    }
+    #suggestions {
+      display: none;
+      position: absolute;
+      width: 300px;
+      max-height: 300px; /* Increase max height for more suggestions */
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      z-index: 1000;
+    }
+    #result {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Item to Check:</h2>
+  <input type="text" id="itemInput" autocomplete="off">
+  <div id="suggestions"></div>
+  <p id="result"></p>
+</body>
+</html>
